@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acme App</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -107,4 +106,43 @@
   </div>
 </body>
 
+  </body>
+</head>
+<body class="bg-[#F6F6FB] flex flex-col min-h-screen justify-center items-center p-6">
+    
+    <!-- Contact Form Card -->
+    <div class="bg-white bg-opacity-70 w-[1199px] h-[666px] p-[80px] pr-[120px] pb-[80px] pl-[120px] gap-[40px] rounded-[24px] shadow-lg flex flex-col items-center">
+        <h1 class="text-[#1A1A2C] text-[48px] font-bold">Get in Touch</h1>
+        
+        <form class="w-full max-w-lg flex flex-col gap-4">
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                <input class="shadow appearance-none border rounded w-[589px] h-[48px] p-[12px] px-[16px] text-gray-700 leading-tight hover:border-[#B5A9FF] focus:outline-none focus:shadow-outline focus:border-[#5E44FF] focus:placeholder-transparent" id="name" type="text" placeholder="John Doe">
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                <input class="shadow appearance-none border rounded w-[589px] h-[48px] p-[12px] px-[16px] text-gray-700 leading-tight hover:border-[#B5A9FF] focus:outline-none focus:shadow-outline focus:border-[#5E44FF] focus:placeholder-transparent" id="email" type="email" placeholder="john@example.com">
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                <textarea class="shadow appearance-none border rounded-[12px] w-[589px] h-[102px] p-[12px] pr-[12px] pb-[12px] pl-[16px] gap-[4px] hover:border-[#B5A9FF] border-gray-300 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-[#5E44FF] focus:placeholder-transparent" id="message" placeholder="Your message..."></textarea>
+            </div>
+            <button class="bg-black text-white w-[589px] h-[56px] p-[16px] pr-[36px] pb-[16px] pl-[36px] gap-[6px] rounded-[16px] hover:bg-gray-800">Submit</button>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="text-white text-center p-4 mt-6 w-full">
+        <div class="container mx-auto flex justify-between items-center max-w-4xl">
+            <p class="text-[#5F5F76]">&copy; 2025 Your Company. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline">FAQ</a>
+                <a href="#" class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline">Terms</a>
+                <a href="#" class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline">AI Policy</a>
+                <a href="#" class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline">Pricing</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
