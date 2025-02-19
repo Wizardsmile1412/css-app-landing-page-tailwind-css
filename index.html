@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get in Touch</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,29 +15,40 @@
       body {
         font-family: "Inter", sans-serif;
       }
+      :root {
+        --background-color: #f6f6fb;
+        --background-color-form: white;
+        --form-heading-color: #1a1a2c;
+        --input-border-color: #e0e0ed;
+        --input-border-color-hover: #b5a9ff;
+        --input-border-color-focus: #5e44ff;
+      }
     </style>
   </head>
 
   <body>
     <!-- Navbar -->
-    <section class="navbar bg-[#F6F6FB] flex items-center w-full h-[128px]">
+    <section
+      class="navbar bg-[var(--background-color)] flex items-center w-full h-[128px]"
+    >
       <nav
         class="w-full h-[80px] bg-white rounded-[99px] flex justify-between items-center px-[80px] py-[12px] shadow-md mt-4"
       >
         <div>
           <img src="./logo.png" alt="acme logo" class="w-[91.67px] h-[40px]" />
         </div>
-        <div class="flex gap-8 text-gray-600">
-          <a href="#" class="text-[#5E44FF] font-medium underline">Home</a>
-          <a href="#" class="hover:text-gray-800">Features</a>
-          <a href="#" class="hover:text-gray-800">Pricing</a>
-          <a href="#" class="hover:text-gray-800">Contact</a>
+        <div class="flex gap-8 text-black">
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Home</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Features</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Pricing</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Contact</a>
         </div>
       </nav>
     </section>
+    <!-- Hero section -->
     <section
-      class="body-hero-section bg-[#F6F6FB] w-full h-[500px] flex justify-center">
-      <!-- Hero Section -->
+      class="body-hero-section bg-[var(--background-color)] w-full h-[500px] flex justify-center"
+    >
       <section
         class="w-[1200px] h-[316px] flex flex-col justify-center items-center gap-[40px] mt-16"
       >
@@ -62,81 +73,167 @@
 
         <!-- Button -->
         <button
-          class="w-[187px] h-[56px] bg-[#1A1A2C] text-white font-semibold text-[16px] rounded-[16px] px-[36px] py-[16px] hover:bg-[#131324]"
+          class="bg-[#1A1A2C] text-white px-9 py-4 rounded-2xl hover:bg-[#5F5F76] focus:bg-[#35354D] focus:ring-4 ring-[#5F5F76] w-[187px]"
         >
           Start Free Trial
         </button>
       </section>
     </section>
 
-      <!--Feature Section-->
-    <div class="p-[120px] bg-[#F6F6FB] ">
+    <!--Feature Section-->
+    <div class="p-[120px] bg-[var(--background-color)]">
       <div class="flex flex-col md:flex-row gap-[20px] mb-[20px]">
-
         <!-- Card 1 -->
-        <div class="bg-[#D7E5F6] w-[387px] h-[272px] p-[28px] rounded-3xl flex-1 flex-col">
-          <div class="bg-[#FFFFFF99] w-[60px] h-[60px] rounded-2xl relative mb-10">
-            <img src="image-1.png" class="w-[32px] h-[32px] absolute top-[14px] left-[14px]" alt="" />
+        <div
+          class="bg-[#D7E5F6] w-[387px] h-[272px] p-[28px] rounded-3xl flex-1 flex-col"
+        >
+          <div
+            class="bg-[#FFFFFF99] w-[60px] h-[60px] rounded-2xl relative mb-10"
+          >
+            <img
+              src="image-1.png"
+              class="w-[32px] h-[32px] absolute top-[14px] left-[14px]"
+              alt=""
+            />
           </div>
-          <h2 class="text-xl font-bold mb-2 gap-[12px]">Streamlined Workflows</h2>
-          <p class="text-gray-700">Automate repetitive tasks and focus on high-impact work with our powerful productivity
-            features.</p>
+          <h2 class="text-xl font-bold mb-2 gap-[12px]">
+            Streamlined Workflows
+          </h2>
+          <p class="text-gray-700">
+            Automate repetitive tasks and focus on high-impact work with our
+            powerful productivity features.
+          </p>
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-[#D8E0FC] w-[387px] h-[272px]  p-[28px] rounded-3xl flex-1">
-          <div class="bg-[#FFFFFF99] w-[60px] h-[60px] rounded-2xl relative mb-10">
-            <img src="image-2.png" class="w-[32px] h-[32px] absolute top-[14px] left-[14px]" alt="" />
+        <div
+          class="bg-[#D8E0FC] w-[387px] h-[272px] p-[28px] rounded-3xl flex-1"
+        >
+          <div
+            class="bg-[#FFFFFF99] w-[60px] h-[60px] rounded-2xl relative mb-10"
+          >
+            <img
+              src="image-2.png"
+              class="w-[32px] h-[32px] absolute top-[14px] left-[14px]"
+              alt=""
+            />
           </div>
-          <h2 class="text-xl font-bold mb-2 ">Blazing Fast Performance</h2>
-          <p class="text-gray-700 gap-[12px]">Experience lightning-fast performance and instant responsiveness with our cutting-edge
-            technology.</p>
+          <h2 class="text-xl font-bold mb-2">Blazing Fast Performance</h2>
+          <p class="text-gray-700 gap-[12px]">
+            Experience lightning-fast performance and instant responsiveness
+            with our cutting-edge technology.
+          </p>
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-[#E8DCF6] w-[387px] h-[272px] p-[28px] rounded-3xl flex-1">
-          <div class="bg-[#FFFFFF99] w-[60px] h-[60px] rounded-2xl relative mb-10">
-            <img src="image-3.png" class="w-[32px] h-[32px] absolute top-[14px] left-[14px]" alt="" />
+        <div
+          class="bg-[#E8DCF6] w-[387px] h-[272px] p-[28px] rounded-3xl flex-1"
+        >
+          <div
+            class="bg-[#FFFFFF99] w-[60px] h-[60px] rounded-2xl relative mb-10"
+          >
+            <img
+              src="image-3.png"
+              class="w-[32px] h-[32px] absolute top-[14px] left-[14px]"
+              alt=""
+            />
           </div>
-          <h2 class="text-xl font-bold mb-2 ">Intuitive Interface</h2>
-          <p class="text-gray-700 gap-[12px]">Our user-friendly interface makes it easy for anyone to streamline their workflow.</p>
+          <h2 class="text-xl font-bold mb-2">Intuitive Interface</h2>
+          <p class="text-gray-700 gap-[12px]">
+            Our user-friendly interface makes it easy for anyone to streamline
+            their workflow.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="bg-[#F6F6FB] flex flex-col min-h-screen justify-center items-center p-6">
+    <div
+      class="bg-[var(--background-color)] flex flex-col min-h-screen justify-center items-center p-6"
+    >
       <!-- Contact Form Card -->
-      <div class="bg-white bg-opacity-70 w-full h-[666px] p-[80px] pr-[120px] pb-[80px] pl-[120px] gap-[40px] rounded-[24px] shadow-lg flex flex-col items-center">
-          <h1 class="text-[#1A1A2C] text-[48px] font-bold">Get in Touch</h1>
-          
-          <form class="w-full max-w-lg flex flex-col gap-4">
-              <div>
-                  <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
-                  <input class="shadow appearance-none border rounded w-[589px] h-[48px] p-[12px] px-[16px] text-gray-700 leading-tight hover:border-[#B5A9FF] focus:outline-none focus:shadow-outline focus:border-[#5E44FF] focus:placeholder-transparent" id="name" type="text" placeholder="John Doe">
-              </div>
-              <div>
-                  <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                  <input class="shadow appearance-none border rounded w-[589px] h-[48px] p-[12px] px-[16px] text-gray-700 leading-tight hover:border-[#B5A9FF] focus:outline-none focus:shadow-outline focus:border-[#5E44FF] focus:placeholder-transparent" id="email" type="email" placeholder="john@example.com">
-              </div>
-              <div>
-                  <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-                  <textarea class="shadow appearance-none border rounded-[12px] w-[589px] h-[102px] p-[12px] pr-[12px] pb-[12px] pl-[16px] gap-[4px] hover:border-[#B5A9FF] border-gray-300 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-[#5E44FF] focus:placeholder-transparent" id="message" placeholder="Your message..."></textarea>
-              </div>
-              <button class="bg-black text-white w-[589px] h-[56px] p-[16px] pr-[36px] pb-[16px] pl-[36px] gap-[6px] rounded-[16px] hover:bg-gray-800">Submit</button>
-          </form>
+      <div
+        class="bg-white bg-opacity-70 w-full h-[666px] p-[80px] pr-[120px] pb-[80px] pl-[120px] gap-[40px] rounded-3xl shadow-lg flex flex-col items-center"
+      >
+        <h1 class="text-[var(--form-heading-color)] text-5xl font-bold">
+          Get in Touch
+        </h1>
+
+        <form class="w-full max-w-lg flex flex-col gap-4">
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name"
+              >Name</label
+            >
+            <input
+              class="shadow appearance-none border rounded w-[589px] h-[48px] p-3 px-[16px] text-gray-700 leading-tight border-var(--input-border-color) hover:border-[--input-border-color-hover] focus:outline-none focus:shadow-outline focus:border-[--input-border-color-focus] focus:placeholder-transparent"
+              id="name"
+              type="text"
+              placeholder="John Doe"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+              >Email</label
+            >
+            <input
+              class="shadow appearance-none border rounded w-[589px] h-[48px] p-3 px-[16px] text-gray-700 leading-tight border-var(--input-border-color) hover:border-[--input-border-color-hover] focus:outline-none focus:shadow-outline focus:border-[--input-border-color-focus] focus:placeholder-transparent"
+              id="email"
+              type="email"
+              placeholder="john@example.com"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="message"
+              >Message</label
+            >
+            <textarea
+              class="shadow appearance-none border rounded-[12px] w-[589px] h-[102px] p-3 pr-[12px] pb-[12px] pl-[16px] gap-[4px] border-var(--input-border-color) hover:border-[--input-border-color-hover] text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-[--input-border-color-focus] focus:placeholder-transparent"
+              id="message"
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+          <button
+            class="bg-[#1A1A2C] text-white px-9 py-4 rounded-2xl hover:bg-[#5F5F76] focus:bg-[#35354D] focus:ring-4 ring-[#5F5F76] w-[589px] gap-[6px]"
+          >
+            Submit
+          </button>
+        </form>
       </div>
-      
+
       <!-- Footer -->
       <footer class="text-white text-center p-4 mt-6 w-full">
-          <div class="container mx-auto flex justify-between items-center max-w-4xl">
-              <p class="text-[#5F5F76]">&copy; 2025 Your Company. All rights reserved.</p>
-              <div class="flex space-x-4">
-                  <a href="#" class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline">FAQ</a>
-                  <a href="#" class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline">Terms</a>
-                  <a href="#" class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline">AI Policy</a>
-                  <a href="#" class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline">Pricing</a>
-              </div>
+        <div
+          class="container mx-auto flex justify-between items-center max-w-4xl"
+        >
+          <p class="text-[#5F5F76]">
+            &copy; 2025 Your Company. All rights reserved.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline"
+              >FAQ</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline"
+              >Terms</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline"
+              >AI Policy</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A2C] hover:text-[#5E44FF] hover:underline"
+              >Pricing</a
+            >
           </div>
+        </div>
       </footer>
     </div>
   </body>
