@@ -1,73 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get in Touch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--background-color);
+      }
+      :root {
+        --background-color: #f6f6fb;
+        --background-color-form: white;
+        --form-heading-color: #1a1a2c;
+        --input-border-color: #e0e0ed;
+        --input-border-color-hover: #b5a9ff;
+        --input-border-color-focus: #5e44ff;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get in Touch</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet" />
-  <style>
-    body {
-      font-family: "Inter", sans-serif;
-    }
+  <body>
+    <!-- Navbar -->
+    <section
+      class="navbar bg-[var(--background-color)] w-full sticky top-3 p-[16px] md:p-[24px]"
+    >
+      <nav
+        class="w-full h-[48px] rounded-[99px] bg-white flex justify-between items-center shadow-md px-[24px] py-[12px] md:h-[56px] lg:h-[80px]"
+      >
+        <div>
+          <img
+            src="./logo.png"
+            alt="acme logo"
+            class="w-[55px] h-[24px] md:w-[73.33px] md:h-[32px] lg:w-[91.67px] lg:h-[40px]"
+          />
+        </div>
+        <!-- Menu for Larger Screens -->
+        <div class="hidden lg:flex gap-8 text-black">
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Home</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Features</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Pricing</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Contact</a>
+        </div>
 
-    :root {
-      --background-color: #f6f6fb;
-      --background-color-form: white;
-      --form-heading-color: #1a1a2c;
-      --input-border-color: #e0e0ed;
-      --input-border-color-hover: #b5a9ff;
-      --input-border-color-focus: #5e44ff;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Navbar -->
-  <section class="navbar bg-[var(--background-color)] flex items-center w-full h-[128px]">
-    <nav
-      class="w-full h-[80px] bg-white rounded-[99px] flex justify-between items-center px-[80px] py-[12px] shadow-md mt-4">
-      <div>
-        <img src="./logo.png" alt="acme logo" class="w-[91.67px] h-[40px]" />
-      </div>
-      <div class="flex gap-8 text-black">
-        <a href="#" class="hover:text-[#5E44FF] hover:underline">Home</a>
-        <a href="#" class="hover:text-[#5E44FF] hover:underline">Features</a>
-        <a href="#" class="hover:text-[#5E44FF] hover:underline">Pricing</a>
-        <a href="#" class="hover:text-[#5E44FF] hover:underline">Contact</a>
-      </div>
-    </nav>
-  </section>
-  <!-- Hero section -->
-  <section class="body-hero-section bg-[var(--background-color)] w-full h-[500px] flex justify-center">
-    <section class="w-[1200px] h-[316px] flex flex-col justify-center items-center gap-[40px] mt-16">
-      <!-- Application Name Box -->
-      <div class="h-[40px] bg-[#563AFF1A] rounded-full flex justify-center items-center px-[20px] py-[8px]">
-        <span class="text-[#5E44FF] text-[16px] font-medium">🌈 Acme Productivity App</span>
-      </div>
-
-      <!-- Text Content -->
-      <div class="w-[1200px] h-[140px] flex flex-col gap-[24px] text-center">
-        <h1 class="text-[80px] font-extrabold h-[84px] py-[0]">
-          Boost Your <span class="text-[#5E44FF]">Product</span>ivity
-        </h1>
-        <h3 class="text-[24px] font-semibold h-[32px] text-#1A1A2C]">
-          Streamline your workflow with our all-in-one productivity app.
-        </h3>
-      </div>
-
-      <!-- Button -->
-      <button
-        class="bg-[#1A1A2C] text-white px-9 py-4 rounded-2xl hover:bg-[#5F5F76] focus:bg-[#35354D] focus:ring-4 ring-[#5F5F76] w-[187px]">
-        Start Free Trial
-      </button>
+        <!-- Hamburger Menu for Small Screens -->
+        <div class="lg:hidden">
+          <button id="menu-btn" class="text-black text-2xl">&#9776;</button>
+        </div>
+        <!-- Dropdown Menu (Initially Hidden) -->
+        <div
+          id="mobile-menu"
+          class="absolute top-[80px] md:top-[100px] bg-white shadow-md flex flex-col items-center gap-[8px] py-[12px] px-[24px] rounded-[24px] right-0 w-[343px] md:w-[786px] md:left-1/2 md:-translate-x-1/2 lg:hidden"
+        >
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Home</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Features</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Pricing</a>
+          <a href="#" class="hover:text-[#5E44FF] hover:underline">Contact</a>
+        </div>
+      </nav>
     </section>
-  </section>
+    <!-- Hero section -->
+    <section
+      class="body-hero-section bg-[var(--background-color)] w-full h-[600px] flex justify-center"
+    >
+      <section
+        class="w-[343px] h-[392px] flex flex-col justify-center items-center gap-[40px] mt-20 md:w-[786px] md:h-[400px] lg:w-[1200px] lg:[316px]"
+      >
+        <!-- Application Name Box -->
+        <div
+          class="h-[40px] w-[260px] px-[20px] py-[8px] bg-[#563AFF1A] rounded-full flex justify-center items-center"
+        >
+          <span class="text-[#5E44FF] text-[16px] font-medium h-[24px]"
+            >🌈 Acme Productivity App</span
+          >
+        </div>
+
+        <!-- Text Content -->
+        <div
+          class="w-[343px] h-[216px] flex flex-col gap-[24px] text-center md:w-[786px] md:h-[224px] lg:w-[1200px] lg:h-[140px]"
+        >
+          <h1
+            class="font-[700] text-center leading-none tracking-tight text-[44px] md:text-[80px] lg:text-[80px]"
+          >
+            Boost Your <span class="text-[#5E44FF]">Product</span>ivity
+          </h1>
+          <h3
+            class="font-semibold text-[#1A1A2C] text-[24px] text-center tracking-tight w-[343px] h-[96px] md:w-[786px] md:h-[32px] lg:w-[1200px] lg:h-[32px]"
+          >
+            Streamline your workflow with our all-in-one productivity app.
+          </h3>
+        </div>
+
+        <!-- Button -->
+        <button
+          class="bg-[#1A1A2C] text-white px-9 py-4 rounded-2xl hover:bg-[#5F5F76] focus:bg-[#35354D] focus:ring-4 ring-[#5F5F76] w-[187px] font-[16px] tracking-normal gap-[6px]"
+        >
+          Start Free Trial
+        </button>
+      </section>
+    </section>
 
   <!--Feature Section-->
   <div class=" p-[10px] md:p-[20px] lg:p-[120px] bg-[var(--background-color)] ">
@@ -154,4 +192,9 @@
 
     </div>
   </body>
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", function () {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+  </script>
 </html>
